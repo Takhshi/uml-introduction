@@ -1,4 +1,5 @@
 @startuml 演習2-3
+left to right direction
 actor 利用者 #DDDDDD;line:black;line.bold;
 rectangle ホテル宿泊予約 {
 usecase ログイン

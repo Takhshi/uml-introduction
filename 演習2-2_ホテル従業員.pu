@@ -1,10 +1,7 @@
 @startuml 演習2-2
-left to right direction
-actor 経営者 #DDDDDD;line:black;line.bold;
-actor ホテル従業員 #DDDDDD;line:black;line.bold;
 rectangle ホテル {
-usecase ホテル従業員として働く
+actor 経営者 #DDDDDD;line:black;line.bold;
+usecase ホテル従業員
 }
-経営者 --|> ホテル従業員として働く
-ホテル従業員として働く <|-- ホテル従業員
+ホテル従業員 <|-- 経営者
 @enduml
