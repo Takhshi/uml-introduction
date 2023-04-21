@@ -1,9 +1,7 @@
 @startuml 演習2-5
-rectangle 販売部 {
 left to right direction
 actor 確認者 #DDDDDD;line:black;line.bold;
 actor 登録者 #DDDDDD;line:black;line.bold;
-}
 rectangle 販売管理システム {
 usecase 注文商品を確認
 usecase 商品の出荷状況を登録

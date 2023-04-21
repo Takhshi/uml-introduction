@@ -1,9 +1,6 @@
 @startuml 演習2-2
-rectangle ホテル {
 actor 経営者 #DDDDDD;line:black;line.bold;
 actor ホテル従業員 #DDDDDD;line:black;line.bold;
-usecase 従業員として働く
-}
-従業員として働く <|-- 経営者
-従業員として働く <|-- ホテル従業員
+
+ホテル従業員 <|-- 経営者
 @enduml
