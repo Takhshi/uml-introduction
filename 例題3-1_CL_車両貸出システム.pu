@@ -15,16 +15,16 @@ class 車 {
     - 駆動:String
 }
 class 予約 {
-    - 予約番号:int
-    - 管理番号:int
+    - 予約番号:String
+    - 管理番号:String
     - 日付:int
     - 顧客ID:String
 }
 class 空車リスト {
-    - 管理番号:int
+    - 管理番号:String
 }
 class 貸出 {
-    - 貸出版王:int
+    - 貸出番号:String
 }
 hide 顧客 circle
 hide 車 circle
