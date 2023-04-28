@@ -1,0 +1,18 @@
+@startuml 雇用形態
+class 従業員 {
+---
+}
+class 派遣社員{
+---
+}
+class 契約社員{
+---
+}
+class 正社員{
+---
+}
+従業員 <|-down- 派遣社員
+従業員 <|-down- 契約社員
+従業員 <|-down- 正社員
+hide circle
+@enduml
