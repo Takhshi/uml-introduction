@@ -1,15 +1,11 @@
 @startuml 医師と患者と医局と診療記録
-' left to right direction
 skinparam classAttributeIconSize 0
 class 患者{}
 class 医師{}
-class 医局{
-- 外科
-- 内科
-- 小児科
-}
-医師 "1"-"*" 患者:診察する >
-医師 "*"--"1" 医局:所属する >
-
+class 医局{}
+class 診察記録{}
+医師 "1"-right->"*" 患者:診察する >
+医師 "*" -- "1" 医局
+患者 "1"-down-"1" 診察記録
 hide circle
 @enduml
