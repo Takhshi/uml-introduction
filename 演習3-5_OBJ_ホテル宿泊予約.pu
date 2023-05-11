@@ -1,25 +1,30 @@
 @startuml ホテル宿泊予約
 left to right direction
-object "<u>利用者1: 利用者</u>" as a {
-
+object "<u>利用者1: 利用者</u>" as customer1 {
+名前 = A
+住所
+電話番号
 }
-object "<u>利用者2: 利用者</u>" as b {
-
+object "<u>利用者2: 利用者</u>" as customer2 {
+名前 = B
+住所
+電話番号
 }
-
-object "<u>ホテル情報1: 301号室</u>" as hotel{
-客室 = シングル
-宿泊費 = 1日 = 1万1千円
-キャンペーン価格 = 9千円
+object "<u>ホテル: ホテル</u>" as hotel1 {
+部屋
 }
-object "<u>ホテル情報1: 302号室</u>" as hotel{
-客室 = シングル
-宿泊費 = 1日 = 1万1千円
-キャンペーン価格 = 9千円
+object "<u>301号室: 部屋</u>" as room1 {
+タイプ = シングル
+価格 = 1泊 = 11,000円
+キャンペーン価格 = 9,000円
 }
-object "<u>ホテル情報1: 303号室</u>" as hotel{
-客室 = シングル
-宿泊費 = 1日 = 1万1千円
-キャンペーン価格 = 9千円
+object "<u>303号室: 部屋</u>" as room2 {
+タイプ = シングル
+価格 = 1泊 = 11,000円
+キャンペーン価格 = 9,000円
 }
+customer1 -- hotel1
+hotel1 -- room1
+customer2 -- hotel1
+hotel1 -- room2
 @enduml

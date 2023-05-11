@@ -1,0 +1,19 @@
+@startuml 資格取得のオブジェクト図
+left to right direction
+object "<u>社員1: 社員</u>" as employee1 {
+名前 = 高橋洋平
+}
+object "<u>社員2: 社員</u>" as employee2 {
+名前 = 樋口正之
+}
+object "<u>資格1: 資格</u>" as qualification1 {
+名称 = 情報処理安全確保支援士
+}
+object "<u>資格2: 資格</u>" as qualification2 {
+名称 = LinuC試験Level1
+}
+
+employee1 -- qualification1
+employee2 -- qualification1
+employee1 -- qualification2
+@enduml
