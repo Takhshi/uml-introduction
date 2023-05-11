@@ -33,5 +33,5 @@ order1 -- product1
 customer1 -- order2
 order2 -- product2
 customer2 -- order3
-order3 -- product1
+order3 -- product2
 @enduml
