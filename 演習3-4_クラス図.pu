@@ -1,0 +1,9 @@
+@startuml クラス図
+left to right direction
+class "車" as car {
+- タイヤ:int
+}
+class "タイヤ" as taiya {
+}
+car "1" *-- "4" taiya
+@enduml
