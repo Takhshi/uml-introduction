@@ -1,11 +1,11 @@
 @startuml 資格取得のオブジェクト図
 left to right direction
-object "<u>顧客1: 重要顧客</u>" as customer1 {
-名前 = 高橋洋平
+object "<u>重要顧客: 顧客</u>" as customer1 {
+氏名 = 高橋洋平
 住所
 }
-object "<u>顧客２: 顧客</u>" as customer2 {
-名前 = 高田利恵
+object "<u>顧客: 顧客</u>" as customer2 {
+氏名 = 高田利恵
 住所
 }
 object "<u>注文1: 注文</u>" as order1 {
