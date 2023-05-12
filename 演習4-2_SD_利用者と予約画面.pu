@@ -10,6 +10,6 @@ activate user
         reserve -> reserve: 認証する()
         activate reserve
     deactivate reserve
-    user <-- reserve: 認証する()
+    user <<-- reserve: 認証する()
 
 @enduml
