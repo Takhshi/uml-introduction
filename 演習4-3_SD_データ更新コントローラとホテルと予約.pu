@@ -1,0 +1,18 @@
+@startuml データ更新コントローラとホテルと予約
+hide footbox
+skinparam style strictuml
+participant "controller: データ更新コントロール" as controller
+participant ": hotel" as hotel
+participant "予約: hotel" as reserve
+
+activate controller
+    controller -> hotel: 予約操作を呼び出す()
+    activate hotel
+        hotel -> reserve: 作成する()
+        activate reserve
+            reserve -> reserve: 予約登録操作を呼び出す()
+                activate reserve
+        deactivate reserve
+        
+
+@enduml
