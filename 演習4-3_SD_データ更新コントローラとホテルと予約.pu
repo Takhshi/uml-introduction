@@ -2,17 +2,16 @@
 hide footbox
 skinparam style strictuml
 participant "controller: データ更新コントロール" as controller
-participant ": hotel" as hotel
-participant "予約: hotel" as reserve
+participant "hotel: ホテル" as hotel
+participant "予約: ホテル" as reserve
 
 activate controller
     controller -> hotel: 予約操作を呼び出す()
     activate hotel
-        hotel -> reserve: 作成する()
-        activate reserve
-            reserve -> reserve: 予約登録操作を呼び出す()
-                activate reserve
-        deactivate reserve
+        activate hotel
+            hotel -> reserve: 作成する()
+            hotel -> hotel: 予約登録操作を呼び出す()
+                activate hotel
         
 
 @enduml
