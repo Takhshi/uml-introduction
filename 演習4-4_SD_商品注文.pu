@@ -1,0 +1,27 @@
+@startuml 商品注文
+hide footbox
+skinparam style strictuml
+actor "<U>:受注係</u>" as order
+participant ":注文登録画面" as boundary <<boundary>>
+participant "商品" as entity1 <<entity>>
+participant "注文" as entity2 <<entity>>
+
+activate order
+    order -> boundary
+    activate boundary
+        activate entity1
+            boundary -> entity1: 商品情報確認()
+            entity1 -->> boundary: 商品情報取得()
+        deactivate entity1
+        boundary -> boundary: 商品情報表示(商品情報)
+            activate boundary
+            deactivate boundary
+    deactivate boundary
+    order -> boundary
+    activate boundary
+deactivate order
+activate entity2
+    boundary -->> entity2: 商品登録(注文情報): <<create>>
+
+
+@enduml
