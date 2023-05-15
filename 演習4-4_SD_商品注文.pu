@@ -20,8 +20,8 @@ activate order
     order -> boundary
     activate boundary
 deactivate order
-activate entity2
+create entity2
     boundary -->> entity2: 商品登録(注文情報): <<create>>
-
+    activate entity2
 
 @enduml
