@@ -8,10 +8,10 @@ participant "予約: ホテル" as reserve
 activate controller
     controller -> hotel: 予約操作を呼び出す()
     activate hotel
-        activate hotel
-            hotel -> reserve: 作成する()
+    create reserve
+            hotel -> reserve: 作成する() <<create>>
             hotel -> hotel: 予約登録操作を呼び出す()
-                activate hotel
+            activate hotel
         
 
 @enduml
