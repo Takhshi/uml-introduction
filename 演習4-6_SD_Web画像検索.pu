@@ -4,7 +4,7 @@ skinparam style strictuml
 actor "<U>:ユーザー</u>" as user
 participant ":ブラウザ" as browser
 participant ":Webサーバー" as server1
-participant "画像サーバー" as server2
+participant ":画像サーバー" as server2
 
 activate user
     user -> browser: 画像のリンクボタンを押す()
