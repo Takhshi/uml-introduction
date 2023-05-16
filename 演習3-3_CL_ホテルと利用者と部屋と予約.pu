@@ -19,7 +19,7 @@ class "予約" as reserve {
 - 値段
 }
 hotel "1" *- "*" room
-hotel "1" o-- "*" user
-user "1" - "1" reserve
-room "1" -- "*" reserve
+hotel o-- user:会員
+user "*" - "1" reserve
+room "1" -- "1" reserve
 @enduml

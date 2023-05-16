@@ -1,9 +1,17 @@
 @startuml オブジェクト図
 left to right direction
-object "<u>車: 車</u>" as car {
+object "<u>車1: 車</u>" as car {
 }
-object "<u>タイヤ: タイヤ</u>" as tire {
-本数 = 4本
+object "<u>タイヤ1: タイヤ</u>" as tire1 {
 }
-car -- tire
+object "<u>タイヤ2: タイヤ</u>" as tire2 {
+}
+object "<u>タイヤ3: タイヤ</u>" as tire3 {
+}
+object "<u>タイヤ4: タイヤ</u>" as tire4 {
+}
+car -- tire1
+car -- tire2
+tire3 -- car
+tire4 -- car
 @enduml
