@@ -1,11 +1,19 @@
 @startuml 資格取得のオブジェクト図
 left to right direction
-object "<u>重要顧客: 顧客</u>" as customer1 {
+object "<u>高橋洋平: 顧客</u>" as customer1 {
 氏名 = 高橋洋平
 住所
 }
-object "<u>顧客: 顧客</u>" as customer2 {
+object "<u>高橋洋平: 重要顧客</u>" as customer {
+氏名 = 高橋洋平
+住所
+}
+object "<u>高田利恵: 顧客</u>" as customer2 {
 氏名 = 高田利恵
+住所
+}
+object "<u>大坪直之: 顧客</u>" as customer3 {
+氏名 = 大坪直之
 住所
 }
 object "<u>注文1: 注文</u>" as order1 {
@@ -20,14 +28,19 @@ object "<u>注文3: 注文</u>" as order3 {
 注文日 = 12/23
 数量 = 1台
 }
-object "<u>商品1: 商品</u>" as product1 {
+object "<u>テレビ: 商品</u>" as product1 {
 商品名 = テレビ
 型式 = V12345
 }
-object "<u>商品2: 商品</u>" as product2 {
+object "<u>冷蔵庫: 商品</u>" as product2 {
 商品名 = 冷蔵庫
 型式 = R8765
 }
+object "<u>プロジェクタ: 商品</u>" as product3 {
+商品名 = プロジェクタ
+型式 = P1122
+}
+customer -- customer1
 customer1 -- order1
 order1 -- product1
 customer1 -- order2
