@@ -1,18 +1,9 @@
 @startuml 演習6-1
-left to right direction
-state f <<fork>>
-state j <<join>>
-state プリンター {
-    state 待機中
-    state 印刷中
-    state 用紙無し
-}
-[*] --> f
-f --> 待機中
-f --> 印刷中
-f --> 用紙無し
-待機中 --> j
-印刷中 --> j
-用紙無し --> j
-j --> [*]
+' left to right direction
+[*] -right-> 待機中
+待機中 --> 印刷中
+印刷中 --> 待機中
+印刷中 --> 用紙無し
+用紙無し --> 印刷中
+待機中 -right-> [*]
 @enduml
