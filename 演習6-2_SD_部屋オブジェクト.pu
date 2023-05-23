@@ -1,0 +1,7 @@
+@startuml 演習6-2
+left to right direction
+[*] --> 空室
+空室--> 予約済
+予約済--> 使用
+使用--> [*]
+@enduml
