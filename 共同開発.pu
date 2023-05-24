@@ -1,34 +1,52 @@
-@startuml 共同開発
+@startuml  
 left to right direction
-actor 管理者 as admin
-actor 利用者 as user
-rectangle 出席管理システム {
-usecase 管理者ログイン as login1
-usecase 利用者アカウント登録 as ur
-usecase 利用者アカウント保守 as um
-usecase 学科情報登録 as dr
-usecase 学科情報保守 as dm
-usecase 利用者ログイン as login2
-usecase クラス情報登録 as cr
-usecase クラス情報保守 as cm
-usecase 学生情報登録 as sr
-usecase 学生情報保守 as sm
-usecase 出席情報登録 as ar
-usecase 出席情報保守 as am
+actor 管理者
+actor 利用者
+
+rectangle 出席管理システム{
+    usecase 管理者ログイン
+    usecase 利用者アカウント登録
+    usecase 利用者アカウント保守
+    usecase 利用者アカウント削除
+    usecase 学科情報登録
+    usecase 学科情報保守
+    usecase 学科情報削除
+    usecase 学科情報修正
+    usecase 学生情報登録
+    usecase 学生情報保守
+    usecase 学生情報削除
+    usecase 学生情報修正
+    usecase 利用者ログイン
+    usecase クラス情報登録
+    usecase クラス情報保守
+    usecase クラス情報削除
+    usecase クラス情報修正
+    usecase 出席情報登録
+    usecase 出席情報保守
+    usecase 出席情報修正
 }
-admin --> login1
-admin --> ur
-admin --> um
-admin --> dr
-admin --> dm
-admin --> sm
-login2 <-- user
-cr <-- user
-cm <-- user
-sr <-- user
-sm <-- user
-ar <-- user
-am <-- user
+
+管理者 -- 管理者ログイン
+管理者 - 利用者アカウント登録
+管理者 - 利用者アカウント保守
+管理者 -- 学科情報登録
+管理者 -- 学科情報保守
+管理者 -- 学生情報保守
+学生情報保守 --- 利用者
+学生情報登録 -- 利用者
+利用者ログイン -- 利用者
+クラス情報登録 -- 利用者
+クラス情報保守 - 利用者
+出席情報登録 -- 利用者
+出席情報保守 - 利用者
+
+利用者アカウント保守 <|-- 利用者アカウント削除
+学科情報保守 <|-- 学科情報修正
+学科情報保守 <|-- 学科情報削除
+学生情報保守 <|-left- 学生情報修正
+学生情報保守 <|-right- 学生情報削除
+クラス情報削除 --|> クラス情報保守
+出席情報修正 --|> 出席情報保守
 
 
 @enduml
