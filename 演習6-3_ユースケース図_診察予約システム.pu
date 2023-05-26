@@ -2,7 +2,7 @@
 left to right direction
 actor 患者 #DDDDDD;line:black;line.bold;
 actor 看護師 #DDDDDD;line:black;line.bold;
-rectangle 診察予約 {
+rectangle 診察予約システム {
 usecase 予約する
 usecase 自分の順番を確認する
 usecase 自分の順番を取り消す
