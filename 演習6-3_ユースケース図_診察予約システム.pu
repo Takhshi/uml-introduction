@@ -1,0 +1,16 @@
+@startuml 演習6-3-1
+left to right direction
+actor 患者 #DDDDDD;line:black;line.bold;
+actor 看護師 #DDDDDD;line:black;line.bold;
+rectangle 診察予約 {
+usecase 予約する
+usecase 登録する
+usecase 順番を確認する
+usecase 自分の順番を取り消す
+}
+患者 --> 予約する
+患者 --> 登録する
+患者 --> 順番を確認する
+患者 --> 自分の順番を取り消す
+順番を確認する <-- 看護師
+@enduml
