@@ -1,0 +1,21 @@
+@startuml 演習6-4-3
+hide footbox
+Actor "<U>:客</u>" as customer
+participant "<U>:料金装置</u>" as price
+participant "<U>:ボタン</u>" as button
+participant "<U>:ベンダー装置</u>" as vendor
+
+activate customer
+customer -> price: お金を入れる
+activate  price
+price -> button : ドリンクの購入を許可する
+activate button
+button -->> customer 
+customer -> button: ボタンを押す
+button -> vendor: ドリンクを選ぶ
+activate vendor
+vendor -> vendor: ドリンクを取り出す
+activate vendor
+vendor -->> customer: ドリンクを渡す
+
+@enduml
