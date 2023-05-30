@@ -16,6 +16,7 @@ button -> vendor: ドリンクを選ぶ
 activate vendor
 vendor -> vendor: ドリンクを取り出す
 activate vendor
+deactivate vendor
 vendor -->> customer: ドリンクを渡す
 
 @enduml
