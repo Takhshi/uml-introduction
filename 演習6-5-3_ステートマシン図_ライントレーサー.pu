@@ -1,14 +1,14 @@
 @startuml 演習6-4-5
 left to right direction
-state 電源swOFF
-state 電源swON {
+state 電源SW_OFF
+state 電源SW_ON {
     state 右旋回: 右モータ = OFF
     state 右旋回: 左モータ = ON
     state 左旋回: 右モータ = ON
     state 左旋回: 左モータ = OFF
 }
-電源swOFF --> 電源sw_ON: 電源ON
-電源swON --> 電源swOFF: 電源OFF
+電源SW_OFF --> 電源SW_ON: 電源ON
+電源SW_ON --> 電源SW_OFF: 電源OFF
 右旋回 --> 左旋回: 光センサーがラインを外れる
 左旋回 --> 右旋回: 光センサーがライン上にある
 @enduml
